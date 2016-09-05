@@ -1,0 +1,16 @@
+{% extend "base.html" %}
+
+{% block content %}
+<h1>Sign Up</h1>
+<form action="/login" method="post" name="login">
+    {{ form.hidden_tag() }}
+    <p>Please enter your name: {{ form.user_name }}</p>
+    {% for error in form.errors.user_name %}
+    <p style="color:red;">[-] {{ error }}</p>
+    {% endfor %}
+
+    <p>remember me {{ form.remember_me }}</p>
+    <p>{{ form.submit }}</p>
+
+</form>
+{% endblock %}

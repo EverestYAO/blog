@@ -1,0 +1,18 @@
+{% extends "base1.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+{% block title %}Leon blog{% endblock %}
+{% block content %}
+
+<h1>Hi,Guys!</h1>
+<div>
+
+{% include '_posts.html' %}
+
+</div>
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.index') }}
+</div>
+
+{{ wtf.quick_form(form) }}
+{% endblock %}
