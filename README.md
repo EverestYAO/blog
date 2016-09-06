@@ -1,0 +1,1 @@
+# blog made by Flask
